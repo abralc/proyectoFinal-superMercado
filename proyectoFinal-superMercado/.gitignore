@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+
+# Compilados
+Debug/
+Release/
+x64/
+x86/
+
+# Temporales
+*.obj
+*.exe
+*.ilk
+*.pdb
+*.ipch
+*.VC.db
+*.db
+*.log
+
+# Visual Studio cache
+*.suo
+*.user
