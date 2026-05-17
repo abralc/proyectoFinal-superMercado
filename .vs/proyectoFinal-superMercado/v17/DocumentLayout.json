@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\isaac.lopez\\source\\repos\\proyectoFinal-superMercado\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A606604C-DA2B-47F7-9744-B99228842050}|proyectoFinal-superMercado\\proyectoFinal-superMercado.vcxproj|C:\\Users\\isaac.lopez\\source\\repos\\proyectoFinal-superMercado\\proyectoFinal-superMercado\\proyectoFinal-superMercado.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A606604C-DA2B-47F7-9744-B99228842050}|proyectoFinal-superMercado\\proyectoFinal-superMercado.vcxproj|solutionrelative:proyectoFinal-superMercado\\proyectoFinal-superMercado.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "proyectoFinal-superMercado.cpp",
+              "DocumentMoniker": "C:\\Users\\isaac.lopez\\source\\repos\\proyectoFinal-superMercado\\proyectoFinal-superMercado\\proyectoFinal-superMercado.cpp",
+              "RelativeDocumentMoniker": "proyectoFinal-superMercado\\proyectoFinal-superMercado.cpp",
+              "ToolTip": "C:\\Users\\isaac.lopez\\source\\repos\\proyectoFinal-superMercado\\proyectoFinal-superMercado\\proyectoFinal-superMercado.cpp",
+              "RelativeToolTip": "proyectoFinal-superMercado\\proyectoFinal-superMercado.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-17T01:46:03.386Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
