@@ -1,3 +1,4 @@
+ HEAD
 .vs/
 x64/
 Debug/
@@ -21,3 +22,27 @@ Release/
 *.VC.opendb
 [Bb]in/
 [Oo]bj/
+=======
+# Visual Studio
+.vs/
+
+# Compilados
+Debug/
+Release/
+x64/
+x86/
+
+# Temporales
+*.obj
+*.exe
+*.ilk
+*.pdb
+*.ipch
+*.VC.db
+*.db
+*.log
+
+# Visual Studio cache
+*.suo
+*.user
+c4750fb56f7263df743f492b98b90c10c6b4b6ca
