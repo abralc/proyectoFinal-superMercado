@@ -14,4 +14,5 @@ struct LineaFactura {
 class Factura {
 public:
     static void imprimirVenta(int noFactura, string serie, string fecha, string nit, string cliente, vector<LineaFactura> detalle, double total);
+    static void generarFacturaHTML(int noFactura, string serie, string fecha, string nit, string cliente, vector<LineaFactura> detalle, double total); //
 };

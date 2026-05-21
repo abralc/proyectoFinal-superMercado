@@ -126,6 +126,7 @@ void Venta::registrarVenta() {
         mysql_query(cn.getConector(), "COMMIT");
         cout << "Venta registrada correctamente.\n";
         Factura::imprimirVenta(no_factura, serie, fecha_factura, nit, "Cliente", detalle, total);
+        Factura::generarFacturaHTML(no_factura, serie, fecha_factura, nit, "Cliente", detalle, total);
     }
     else {
         mysql_query(cn.getConector(), "ROLLBACK");
