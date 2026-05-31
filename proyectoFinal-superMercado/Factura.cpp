@@ -15,15 +15,16 @@ void Factura::imprimirVenta(int noFactura, string serie, string fecha, string ni
     cout << "NIT: " << nit << endl;
     cout << "Cliente: " << cliente << endl;
     cout << "---------------------------------------------\n";
-    cout << left << setw(6) << "COD" << setw(22) << "PRODUCTO" << right << setw(6) << "CANT" << setw(9) << "PRECIO" << setw(10) << "SUBTOTAL" << endl;
+    cout << left << setw(6) << "COD" << setw(18) << "PRODUCTO" << setw(14) << "MARCA" << right << setw(6) << "CANT" << setw(9) << "PRECIO" << setw(10) << "SUBTOTAL" << endl;
     cout << "---------------------------------------------\n";
 
     for (LineaFactura item : detalle) {
         cout << left << setw(6) << item.id_producto
-             << setw(22) << item.producto.substr(0, 21)
-             << right << setw(6) << item.cantidad
-             << setw(9) << fixed << setprecision(2) << item.precio_unitario
-             << setw(10) << fixed << setprecision(2) << item.subtotal << endl;
+            << setw(18) << item.producto.substr(0, 17)
+            << setw(14) << item.marca.substr(0, 13)
+            << right << setw(6) << item.cantidad
+            << setw(9) << fixed << setprecision(2) << item.precio_unitario
+            << setw(10) << fixed << setprecision(2) << item.subtotal << endl;
     }
 
     cout << "---------------------------------------------\n";
@@ -80,7 +81,9 @@ void Factura::generarFacturaHTML(int noFactura, string serie, string fecha, stri
             <thead>
                 <tr>
                     <th>COD</th>
+                    <th>IMAGEN</th>
                     <th>PRODUCTO</th>
+                    <th>MARCA</th>
                     <th>CANT</th>
                     <th>PRECIO</th>
                     <th>SUBTOTAL</th>
@@ -90,9 +93,16 @@ void Factura::generarFacturaHTML(int noFactura, string serie, string fecha, stri
     )";
 
     for (LineaFactura item : detalle) {
+        // Si no hay imagen en la BD, mostrar un texto. Si hay, se crea la etiqueta <img> para insertar imagen.
+        string celdaImagen = item.imagen.empty() ?
+            "<span style='color: #999; font-size: 0.8em;'>Sin imagen</span>" :
+            "<img src='" + item.imagen + "' alt='" + item.producto + "' style='width: 50px; height: 50px; object-fit: cover; border-radius: 5px;'>";
+
         archivo << "<tr>"
             << "<td>" << item.id_producto << "</td>"
+            << "<td style='text-align: center;'>" << celdaImagen << "</td>" // CELDA DE LA IMAGEN
             << "<td>" << item.producto << "</td>"
+            << "<td>" << item.marca << "</td>"
             << "<td>" << item.cantidad << "</td>"
             << "<td>Q " << fixed << setprecision(2) << item.precio_unitario << "</td>"
             << "<td>Q " << fixed << setprecision(2) << item.subtotal << "</td>"
