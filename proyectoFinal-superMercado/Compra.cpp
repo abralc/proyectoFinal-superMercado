@@ -7,7 +7,7 @@
 #include <mysql.h>
 using namespace std;
 
-Compra::Compra() { id_compra = 0; no_orden_compra = 0; id_proveedor = 0; id_empleado = 0; }
+Compra::Compra() { id_compra = 0; no_orden_compra = 0; id_proveedor = 0; }
 
 int Compra::siguienteOrden() {
     ConexionBD cn;
@@ -30,7 +30,6 @@ void Compra::registrarCompra() {
 
     cout << "\n===== REGISTRO DE COMPRA =====\n";
     id_proveedor = Validaciones::pedirEntero("Ingrese ID proveedor: ");
-    id_empleado = Validaciones::pedirEntero("Ingrese ID empleado responsable: ");
     fecha = Validaciones::pedirFecha("Ingrese fecha de orden YYYY-MM-DD: ");
 
     do {
@@ -106,6 +105,7 @@ void Compra::listarCompras() {
         cout << "\n===== COMPRAS =====\n";
         while ((row = mysql_fetch_row(res))) cout << row[0] << " | Orden: " << row[1] << " | Fecha: " << row[2] << " | Proveedor: " << row[3] << endl;
         mysql_free_result(res);
-    } else cout << "ALERTA SQL: " << mysql_error(cn.getConector()) << endl;
+    }
+    else cout << "ALERTA SQL: " << mysql_error(cn.getConector()) << endl;
     cn.cerrarConexion();
 }
